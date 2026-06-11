@@ -19,8 +19,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Gradle permissions
-        run: chmod +x gradlew
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+
+      - name: Download gradle wrapper
+        run: gradle wrapper --gradle-version 7.6
 
       - name: Build
         run: ./gradlew build --no-daemon
