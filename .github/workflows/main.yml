@@ -20,13 +20,13 @@ jobs:
           distribution: 'temurin'
 
       - name: Gradle permissions
-        run: chmod +x backrooms-mod/gradlew
+        run: chmod +x gradlew
 
       - name: Build
-        run: cd backrooms-mod && ./gradlew build --no-daemon
+        run: ./gradlew build --no-daemon
 
       - name: Upload JAR
         uses: actions/upload-artifact@v4
         with:
           name: backrooms-mod-fabric
-          path: backrooms-mod/build/libs/backrooms-mod-1.0.0.jar
+          path: build/libs/backrooms-mod-1.0.0.jar
