@@ -1,4 +1,4 @@
-name: Build Backrooms Forge Mod
+name: Build Backrooms Fabric Mod
 
 on:
   push:
@@ -28,5 +28,5 @@ jobs:
       - name: Upload JAR
         uses: actions/upload-artifact@v3
         with:
-          name: backrooms-mod-forge
+          name: backrooms-mod-fabric
           path: build/libs/backrooms-mod-1.0.0.jar
